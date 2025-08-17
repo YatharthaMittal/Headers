@@ -19,22 +19,12 @@
         @media (min-width: 992px) {
             .navbar-nav .dropdown:hover .dropdown-menu {
                 display: block;
-                margin-top: 0;
                 opacity: 1;
-                visibility: visible;
-                transform: translateY(0);
-                transition: all 0.3s ease-in-out;
             }
 
             .navbar-nav .dropdown .dropdown-menu {
                 display: block;
                 opacity: 0;
-                visibility: hidden;
-                transform: translateY(-10px);
-                transition: all 0.3s ease-in-out;
-                margin-top: 0;
-                border: none;
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
             }
 
             /* Remove Bootstrap's focus styles for hover behavior */
@@ -47,21 +37,12 @@
 
             /* Ensure normal Bootstrap behavior on mobile */
             .navbar-nav .dropdown .dropdown-menu {
-                position: static !important;
-                transform: none !important;
-                opacity: 1 !important;
-                visibility: visible !important;
-                display: none;
-                /* Let Bootstrap handle the display */
                 box-shadow: none;
                 border: none;
                 background-color: transparent;
-                padding-left: 1rem;
+                padding-left: 1rem; 
             }
 
-            .navbar-nav .dropdown .dropdown-menu.show {
-                display: block !important;
-            }
         }
 
         .navbar {
