@@ -40,7 +40,7 @@
                 box-shadow: none;
                 border: none;
                 background-color: transparent;
-                padding-left: 1rem; 
+                padding-left: 1rem;
             }
 
         }
@@ -52,6 +52,58 @@
         .dropdown-toggle {
             position: relative;
         }
+
+        /* Custom Hamburger Icon Styles */
+        .hamburger-icon {
+            display: inline-block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .hamburger-icon .line {
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: #333;
+            /* Color of the lines */
+            position: absolute;
+            left: 0;
+            transition: all 0.3s ease;
+        }
+
+        .line1 {
+            top: 0;
+        }
+
+        .line2 {
+            top: 8px;
+        }
+
+        .line3 {
+            top: 16px;
+        }
+
+        /* Transform to X when navbar is open */
+        .navbar-toggler:not(.collapsed) .hamburger-icon .line1 {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .navbar-toggler:not(.collapsed) .hamburger-icon .line2 {
+            opacity: 0;
+            /* Hide the middle line */
+        }
+
+        .navbar-toggler:not(.collapsed) .hamburger-icon .line3 {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* Optional: Adjust button padding for better alignment */
+        .navbar-toggler {
+            border: none;
+            /* Remove default border if desired */
+        }
     </style>
 </head>
 
@@ -60,10 +112,19 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="hamburger-icon">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
@@ -90,7 +151,7 @@
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
                         </li>
-                        
+
                     </ul>
                 </div>
             </div>
