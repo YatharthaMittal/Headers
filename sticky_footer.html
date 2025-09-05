@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reveal Footer on Scroll</title>
+  <style>
+    body {
+      font-size: 32px;
+      margin: 0;
+    }
+    .section {
+      padding: 400px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    ._1, ._3 {
+      background: #fff79c;
+    }
+    ._2, ._4 {
+      background: #3066be;
+    }
+    .content.wrapper {
+      position: relative;
+      z-index: 1;
+    }
+    .footer {
+      position: sticky;
+      bottom: 0;
+      width: 100%;
+      height: 100vh;
+      background: #3066be;
+      z-index: 0;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <div class="content wrapper">
+        <div class="section _1">Section 1</div>
+        <div class="section _2">Section 2</div>
+        <div class="section _3">Section 3</div>
+      </div>
+      
+      <div class="section _4 footer">Footer</div>
+    </div>
+  </div>
+</body>
+</html>
